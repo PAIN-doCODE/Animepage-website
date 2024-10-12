@@ -1,0 +1,503 @@
+/* Day 1  - header styling*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+
+}
+
+body {
+    height: 100vh;
+    text-align: center;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 0%, rgba(255, 255, 255, 1) 0%);
+    padding: 2rem;
+    /* background: rgb(252,176,69);
+    background: linear-gradient(90deg, rgba(252,176,69,1) 1%, rgba(131,58,180,1) 24%, rgba(253,29,29,1) 100%); */
+}
+
+
+
+
+.header-content {
+    max-width: 1080px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+
+}
+
+.anime-frontline {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+}
+
+.logo-icon {
+    height: 20px;
+    width: 20px;
+    margin-top: 0.4rem;
+}
+
+.logo-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    color: black;
+    font-weight: bold;
+}
+
+.nav {
+    display: none;
+    gap: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .nav {
+        display: flex;
+    }
+
+}
+
+.nav-link {
+    color: #718096;
+    font-size: 1.125rem;
+    font-weight: 700;
+    transform: color 0.1s;
+}
+
+.nav-link:hover {
+    color: rgb(123, 123, 216);
+
+}
+
+.contactButton {
+    display: none;
+
+}
+
+.contactButton:hover {
+    background-color: rgb(10, 10, 207);
+}
+
+@media screen and (min-width:768px) {
+    .contactButton {
+
+        display: block;
+        font-size: 0.8rem;
+        font-weight: bold;
+        background-color: rgba(5, 5, 169, 0.668);
+        color: white;
+        padding: 0.6rem 1rem;
+        padding-bottom: 0.6rem;
+        border: 1px solid black;
+        border-radius: 0.375rem;
+    }
+}
+
+
+/* Day 2 - hero page styling*/
+
+
+
+
+.hero_section {
+
+    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 3rem;
+    padding: 0.6rem;
+    margin-top: 4rem;
+}
+
+.left_content {
+
+    text-align: center;
+    animation: slideFromLeft 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideFromLeft {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.hero_label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: rgb(69, 69, 239);
+}
+
+.hero_title {
+    font-size: 2.2rem;
+    padding: 1rem;
+}
+
+.hero_desc {
+    color: gray;
+    font-size: 1.13rem;
+}
+
+
+.button_group {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.start-button,
+.tour-button {
+    border: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: rgba(5, 5, 169, 0.668);
+    color: white;
+    padding: 0.6rem 1rem;
+    border: 1px solid black;
+    border-radius: 0.375rem;
+    margin-top: 1rem;
+
+}
+
+.tour-button {
+    background-color: rgb(80, 76, 76);
+}
+
+.tour-button:hover {
+    background-color: black;
+}
+
+
+.start-button:hover {
+    background-color: rgb(10, 10, 207);
+}
+
+.right_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img_container {
+    border-radius: 1.625rem;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 55vh;
+}
+
+.img_content {
+    height: 100%;
+    width: 100%;
+}
+
+/* .vid-content{
+    height: 100%;
+    width: 100%;
+} */
+
+@media screen and (min-width: 768px) {
+
+    .hero_section {
+
+        flex-direction: row;
+
+
+
+    }
+
+    .left_content {
+        max-width: 50%;
+        text-align: left;
+
+
+    }
+
+    .hero_title {
+
+        padding-left: 0;
+        font-size: 3.1rem;
+        padding-top: 1rem;
+        padding-bottom: 1.3rem;
+    }
+
+    .button_group {
+        justify-content: start;
+        padding-top: 2rem;
+    }
+
+
+    .hero_desc {
+        max-width: 80%;
+        font-size: 1rem;
+    }
+}
+
+/* icons styling */
+
+.logo-img {
+    height: 1.5rem;
+
+    text-decoration: none;
+}
+
+
+
+.icontab {
+
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icons {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+    gap: 3rem;
+    background-color: rgb(233, 225, 225);
+    border: none;
+    border-radius: 5px;
+    animation: leftToright 1s ease forwards;
+
+}
+
+@keyframes leftToright {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.icon-heading {
+    font-size: 1.67rem;
+    font-weight: bold;
+    margin-bottom: 2.8rem;
+}
+
+.Google,
+.Netflix,
+.Crunchyroll,
+.Wikipedia {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: gray;
+}
+
+
+@media screen and (min-width: 640px) {
+
+    .icons {
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 2rem;
+        gap: 3rem;
+        background-color: rgb(191, 180, 180);
+        border: none;
+        border-radius: 5px;
+
+
+    }
+
+
+    .icon-heading {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 2.8rem;
+    }
+
+}
+
+
+
+/* Day 3 -  Card Section    */
+
+.featureMain-container {
+  
+    background-color: rgba(128, 128, 128, 0.158);
+   
+}
+
+
+.feature-container {
+    max-width: 768px;
+    margin: 0 auto;
+    margin-top: 1.6rem;
+
+}
+
+.feature-content {
+    
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.feature-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+   
+}
+
+.feature-content p {
+    font-size: 0.79rem;
+    font-weight: 500;
+
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+    
+
+}
+
+.Anime-profiles {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: #4a90e2;
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    
+}
+
+
+.Anime-recommendations {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color:#FF6289;
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+
+.Anime-news {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+  background-color:#fcbf58;
+    padding: 1rem;
+    align-items: center;
+    gap: 3rem;
+    border-radius: 10px;
+
+}
+
+.Anime-wallpapers {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color:#44bfc3;
+    padding: 1rem;
+    align-items: center;
+    gap: 3rem;
+    border-radius: 10px;
+}
+
+
+.Anime-discussions {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+   background-color: #77b05d;
+    padding: 1rem;
+    align-items: center;
+    gap: 3rem;
+    border-radius: 10px;
+}
+
+.Responsive-Support {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+   background-color: #7d78b1;
+    padding: 1rem;
+    align-items: center;
+    gap: 3rem;
+    border-radius: 10px;
+}
+
+.feature-logo {
+    width: 20%;
+}
+
+.feature-desc{
+color: white;
+padding-bottom: 1rem; 
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+
+
+}   
+
+.feature-desc h2{
+    font-size: 1rem;
+   
+    font-weight: bolder;
+}
+
+.feature-desc p{
+    font-size: 0.76rem;
+}
+
+
+.Responsive-Support {
+   gap: 1.5rem;
+}
+@media screen and (max-width:768px){
+   
+    .feature-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.4rem;
+
+} 
+
+
+/* Day 4  - Testimonal section */
+
